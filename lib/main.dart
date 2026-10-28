@@ -35,19 +35,33 @@ class ProfilePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            CircleAvatar(
+          children: [
+            const CircleAvatar(
               radius: 60,
               backgroundColor: Colors.grey,
               child: Icon(Icons.person, size: 60, color: Colors.white),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'I Ketut Gunawan, S.Kom, M.T.I.',
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Senior Backend Engineer & Dosen',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[700],
+              ),
+            ),
+            const SizedBox(height: 32),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(Icons.edit),
+              label: const Text('Edit Profil'),
             ),
           ],
         ),
