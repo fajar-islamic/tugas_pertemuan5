@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package0:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,8 +32,25 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
         foregroundColor: Colors.white,
       ),
-      body: const Center(
-        child: Text('Halaman Utama Profil'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            CircleAvatar(
+              radius: 60,
+              backgroundColor: Colors.grey,
+              child: Icon(Icons.person, size: 60, color: Colors.white),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'I Ketut Gunawan, S.Kom, M.T.I.',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
