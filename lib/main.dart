@@ -33,37 +33,42 @@ class ProfilePage extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const CircleAvatar(
-              radius: 60,
-              backgroundColor: Colors.grey,
-              child: Icon(Icons.person, size: 60, color: Colors.white),
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'I Ketut Gunawan, S.Kom, M.T.I.',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.grey,
+                child: Icon(Icons.person, size: 60, color: Colors.white),
               ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Senior Backend Engineer & Dosen',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey[700],
+              const SizedBox(height: 20),
+              const Text(
+                'I Ketut Gunawan, S.Kom, M.T.I.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 32),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.edit),
-              label: const Text('Edit Profil'),
-            ),
-          ],
+              const SizedBox(height: 8),
+              Text(
+                'Senior Backend Engineer & Dosen',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey[700],
+                ),
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.edit),
+                label: const Text('Edit Profil'),
+              ),
+            ],
+          ),
         ),
       ),
     );
