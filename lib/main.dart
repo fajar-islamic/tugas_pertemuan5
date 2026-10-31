@@ -40,23 +40,7 @@ class ProfilePage extends StatelessWidget {
             children: [
               const ProfileAvatar(),
               const SizedBox(height: 20),
-              const Text(
-                'I Ketut Gunawan, S.Kom, M.T.I.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Senior Backend Engineer & Dosen',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey[700],
-                ),
-              ),
+              const ProfileInfo(),
               const SizedBox(height: 32),
               ElevatedButton.icon(
                 onPressed: () {},
@@ -71,7 +55,7 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-// Widget dipisah sendiri biar main.dart makin rapi
+// Widget Avatar dipisah
 class ProfileAvatar extends StatelessWidget {
   const ProfileAvatar({super.key});
 
@@ -81,6 +65,36 @@ class ProfileAvatar extends StatelessWidget {
       radius: 60,
       backgroundColor: Colors.grey,
       child: Icon(Icons.person, size: 60, color: Colors.white),
+    );
+  }
+}
+
+// Widget Informasi Teks dipisah
+class ProfileInfo extends StatelessWidget {
+  const ProfileInfo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text(
+          'I Ketut Gunawan, S.Kom, M.T.I.',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          'Senior Backend Engineer & Dosen',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.grey[700],
+          ),
+        ),
+      ],
     );
   }
 }
