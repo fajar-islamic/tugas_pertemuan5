@@ -38,11 +38,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CircleAvatar(
-                radius: 60,
-                backgroundColor: Colors.grey,
-                child: Icon(Icons.person, size: 60, color: Colors.white),
-              ),
+              const ProfileAvatar(),
               const SizedBox(height: 20),
               const Text(
                 'I Ketut Gunawan, S.Kom, M.T.I.',
@@ -71,6 +67,20 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+// Widget dipisah sendiri biar main.dart makin rapi
+class ProfileAvatar extends StatelessWidget {
+  const ProfileAvatar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CircleAvatar(
+      radius: 60,
+      backgroundColor: Colors.grey,
+      child: Icon(Icons.person, size: 60, color: Colors.white),
     );
   }
 }
